@@ -1,0 +1,244 @@
+:root {
+  --app-primary: #1976d2;
+  --app-primary-dark: #0d47a1;
+  --app-accent: #ffb300;
+  --app-bg: #f4f6fb;
+  --app-sidebar-bg: #ffffff;
+}
+
+/* Global */
+body {
+  background-color: var(--app-bg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* App shell */
+.app-shell {
+  background-color: var(--app-bg);
+}
+
+/* Top navbar */
+.app-navbar {
+  background: linear-gradient(90deg, #1976d2, #2196f3);
+  color: #fff;
+}
+
+.app-navbar .navbar-brand,
+.app-navbar .nav-link,
+.app-navbar span,
+.app-navbar button {
+  color: #fff !important;
+}
+
+.app-navbar .btn-outline-secondary {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.app-navbar .btn-outline-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Logo góc trái */
+.app-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+}
+
+.app-logo span {
+  color: #ffeb3b;
+}
+
+.app-logo-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.app-logo-subtext {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: var(--app-sidebar-bg);
+}
+
+.sidebar-header {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9e9e9e;
+}
+
+.sidebar .nav-link {
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 6px 10px;
+  color: #555;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+  background-color: #e3f2fd;
+  color: var(--app-primary);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--app-primary);
+  border-color: var(--app-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--app-primary-dark);
+  border-color: var(--app-primary-dark);
+}
+
+/* Titles */
+.page-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.page-subtitle {
+  font-size: 0.9rem;
+  color: #757575;
+  margin-bottom: 1.25rem;
+}
+
+/* Cards */
+.card {
+  border-radius: 0.75rem;
+  border: none;
+}
+
+.card.shadow-sm {
+  box-shadow: 0 2px 10px rgba(15, 35, 95, 0.08) !important;
+}
+
+/* Login page */
+.login-page {
+  background: radial-gradient(circle at top, #e3f2fd 0, #f4f6fb 55%, #e8eaf6 100%);
+}
+
+/* Logo lớn riêng cho màn hình đăng nhập */
+.app-logo-lg {
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  font-size: 26px;
+  box-shadow: 0 6px 18px rgba(15, 35, 95, 0.25);
+  background: radial-gradient(circle at 30% 20%, #ffeb3b 0, #1976d2 35%, #0d47a1 100%);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.app-logo-lg span {
+  color: #fff;
+}
+
+/* Khối brand ở login */
+.login-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.login-brand-main {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1a237e;
+}
+
+.login-brand-sub {
+  font-size: 12px;
+  color: #616161;
+}
+
+/* Chỉnh card login cân đối hơn */
+.login-card {
+  max-width: 440px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+
+/* Tables */
+.table thead th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9e9e9e;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+/* Khối câu hỏi */
+.question-block+.question-block {
+  border-top: 1px dashed #e0e0e0;
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* Language toggle (EN / VI) */
+.lang-toggle {
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 2px;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.lang-toggle button {
+  border: none;
+  font-size: 11px;
+  min-width: 32px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Nút đang được chọn */
+.lang-toggle button.active {
+  background-color: #ffeb3b;
+  color: #0d47a1;
+  font-weight: 600;
+}
+
+/* Nút không chọn (ở navbar, nền xanh) */
+.app-navbar .lang-toggle button:not(.active) {
+  color: #ffffff;
+}
+
+.app-navbar .lang-toggle button:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Nút language trong card trắng (login) */
+.login-card .lang-toggle {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.login-card .lang-toggle button:not(.active) {
+  color: #424242;
+}
+
+.login-card .lang-toggle button:not(.active):hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
